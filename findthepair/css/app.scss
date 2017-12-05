@@ -1,0 +1,256 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  &.theme-light{
+    background: #fff;
+    color: #4b5157;
+  }
+  &.theme-dark{
+    background: #2a2c33;
+    color: #cecec9;
+  }
+
+}
+
+.container{
+  background: #fff;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px 0;
+  &.container--painted{
+    background: #f7f7f7;
+  }
+  &.container--dark{
+    background: #2a2c33;
+    border-color: #454a57;
+    &.container--painted{
+      background: #2a2c33;
+    }
+  }
+}
+
+.app{
+  margin: 5px auto;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-head{
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+.cardboard{
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  transition: opacity 0.2s ease;
+}
+
+.card{
+  $card-width: 60px;
+  $card-height: 60px;
+  width: $card-width;
+  height: $card-height;
+  margin: 1px 0;
+  opacity: 1;
+  transition: 0.2s ease;
+  perspective: 1000px;
+  img{
+    max-width: $card-width;
+    max-height: $card-height;
+  }
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  &.card--flipped{
+    .flipper{
+      transform: rotateY(-180deg);
+    }
+  }
+  &.card--hidden{
+    visibility: hidden;
+    opacity: 0;
+  }
+  .flipper__front,
+  .flipper__back {
+    width: $card-width;
+    height: $card-height;
+    backface-visibility: hidden;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  }
+  .flipper__front {
+  	z-index: 2;
+  	transform: rotateY(0deg);
+  }
+  .flipper__back {
+  	transform: rotateY(180deg);
+  }
+  .flipper {
+  	transition: 0.5s;
+  	transform-style: preserve-3d;
+  	position: relative;
+  }
+}
+
+.controls{
+
+  .controls__wrapper{
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .controls__row{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+
+    &.controls__row--distibuted{
+      justify-content: space-between;
+    }
+
+    &.controls__row--centered{
+      justify-content: center;
+    }
+  }
+}
+
+.button{
+  background: transparent;
+  box-shadow: 0;
+  outline: 0;
+  border: 1px solid #27a8d9;
+  color: #27a8d9;
+  border-radius: 3px;
+  padding: 10px 35px;
+  font-size: 20px;
+  margin: 2px;
+  transition: 0.2s ease;
+  &:hover{
+    cursor: pointer;
+    background: #1997c6;
+    color: #fff;
+  }
+  &.button--full-width{
+    width: 100%;
+  }
+  &.button--dark{
+    border-color: #2cc790;
+    color: #2cc790;
+    &:hover{
+      background: #2cc790;
+      color: #fff;
+    }
+  }
+}
+
+.select{
+  background: transparent;
+  box-shadow: 0;
+  outline: 0;
+  border: 1px solid #27a8d9;
+  color: #27a8d9;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 2px;
+  transition: 0.2s ease;
+  &:hover{
+    cursor: pointer;
+  }
+  &.select--dark{
+    border-color: #2cc790;
+    color: #2cc790;
+  }
+}
+
+.input{
+  background: transparent;
+  box-shadow: 0;
+  outline: 0;
+  border: 1px solid #27a8d9;
+  color: #27a8d9;
+  border-radius: 3px;
+  padding: 10px 5px;
+  font-size: 20px;
+  width: 100%;
+  margin: 2px;
+  &:focus::-webkit-input-placeholder{
+      color: transparent;
+  }
+  &.input--dark{
+    border-color: #2cc790;
+    color: #2cc790;
+  }
+}
+
+.best-table{
+  margin: 0 auto;
+  tr{
+    border: 1px solid #27a8d9;
+    th{
+      border: 1px solid #27a8d9;
+      border-left: 0;
+      border-right: 0;
+      margin: 0;
+      padding: 10px 18px;
+    }
+    td{
+      padding: 10px 18px;
+    }
+  }
+  &.best-table--dark{
+    tr{
+      border-color: #2cc790;
+      th{
+        border-color: #2cc790;
+      }
+      td{
+      }
+    }
+  }
+}
+
+.pointer-events-disabled{
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.margin-removed{
+  margin: 0;
+}
+
+.margin-right{
+  margin-right: 5px;
+}
+
+.border-bottom-radius-removed{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.border-top-radius-removed{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.border-bottom-removed{
+  border-bottom: 0;
+}
+
+.border-top-removed{
+  border-top: 0;
+}
