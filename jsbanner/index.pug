@@ -1,0 +1,74 @@
+// output:index.html
+
+doctype html
+head
+  title banner 3D
+  link(rel="stylesheet" href="css/style.css")
+
+body
+  section#banner.banner
+    a(href="#" class="full-banner-link")
+    
+    //- *** left *** -//
+  
+    .left
+      .logo
+        img(class="logo__small" src="images/images/T_SamsungLogo.png")
+        img(class="logo__big" src="images/images/T_GalaxyLogo.png")
+          
+      .feature
+        img(class="feature__caption feature__caption--active" data-feature="0" src="images/images/T_Text1.png")
+        img(class="feature__caption" data-feature="1" src="images/images/T_Text2.png")
+        img(class="feature__caption" data-feature="2" src="images/images/T_Text3.png")
+        img(class="feature__caption" data-feature="3" src="images/images/T_Text4.png")
+          
+    //- *** left *** -//
+    
+    .center
+      #drops-container
+          
+        
+        
+      - var imgCounterOne = 1;
+      - var imgCounterTwo = 10;
+      - var dataCounter = 1;
+      ul(class="assets")
+        li
+          img(class="asset asset--active" data-asset="0" src="images/images/phone/phone_00000.png")
+        while imgCounterOne < 10 && dataCounter < 10 
+          li 
+            img(class="asset" data-asset="" + dataCounter++ src="images/images/phone/phone_0000" + imgCounterOne++ + ".png")
+        while imgCounterTwo <= 59 && dataCounter < 59
+          li 
+            img(class="asset" data-asset="" + dataCounter++ src="images/images/phone/phone_000" + imgCounterTwo++ + ".png")
+        li.asset-inner
+          img(class="asset" src="images/images/internals.png")
+        li#player.asset-inner.player.asset-inner--active
+          <iframe class="asset" src="https://www.youtube.com/embed/eRsGyueVLvQ" frameborder="0" allowfullscreen></iframe>
+
+      #range.range-container
+        input(type="range" orient="vertical" class="range-container__range")
+        //- .range-container__range-values
+        //-   span.range-values__value.range-values__value--low 0
+        //-   span.range-values__value.range-values__value--current 0
+        //-   span.range-values__value.range-values__value--high 58      
+    
+    //- *** right *** -//
+    
+    .right
+      .text
+        img(src="images/images/T_SliderText.png")
+      .button
+        img(src="images/images/T_CTA.png")
+        
+          
+    
+    //- *** right *** -//
+    
+  //- *** script *** -//
+  //- script(src="js/banner.js")
+  script(src="js/main.js")
+  //- script(src="js/spagetti-10.js")
+  
+  //- *** script *** -//
+      

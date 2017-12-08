@@ -1,0 +1,212 @@
+.banner
+  display: flex
+  width: 900px
+  max-width: 100%
+  margin: 0 auto
+  padding: 10px
+  border: 1px solid #000
+  position: relative
+
+.full-banner-link
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 10
+
+.left
+  position: relative
+  text-align: center
+
+.center
+  display: flex
+  margin-left: 30px
+
+.right
+  position: relative
+  .button
+    position: absolute
+    bottom: 0
+
+.logo
+  text-align: center
+  .logo__small,
+  .logo__big
+    display: block
+    width: 100%
+    margin: 0 auto
+  .logo__small
+    height: 15px
+    width: auto
+  .logo__big
+    height: 30px
+    width: auto
+.feature
+  position: absolute
+  bottom: 0
+  .feature__caption
+    visibility: hidden
+    position: absolute
+    bottom: 0
+    transition: 1s ease
+    opacity: 0
+    &.feature__caption--active
+      visibility: visible
+      opacity: 1
+
+
+.assets
+  margin: 0
+  padding: 0
+  position: relative
+  li.asset-inner
+    display: block
+    position: absolute
+    right: -164px
+    top: -14px
+    transition: 0.15s ease
+    opacity: 0
+    .asset
+      display: block
+    &.player
+      top: 16px
+      left: 80px
+      z-index: 10
+      .asset
+        width: 360px
+        height: 195px
+    &.asset-inner--active
+      opacity: 1
+  li
+    list-style-type: none
+    .asset
+      display: none
+      transition: 0.2s ease
+      &.asset--active
+        display: block
+.range-container
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 20px
+  height: 210px
+  z-index: 10
+
+input[type=range][orient=vertical]
+  transform: rotate(450deg)
+  -webkit-appearance: none
+  background: transparent
+  height: 20px
+  &::-webkit-slider-thumb
+    -webkit-appearance: none
+  &:focus
+    outline: none
+  &::-ms-track
+    position: relative
+    top: 7px
+    width: 100%
+    cursor: pointer
+    background: transparent
+    border-color: transparent
+    color: transparent
+  &::-webkit-slider-thumb
+    position: relative
+    top: 7px
+    -webkit-appearance: none
+    border: 1px solid #000000
+    height: 16px
+    width: 16px
+    border-radius: 50%
+    background: #000000
+    cursor: pointer
+    margin-top: -14px
+  &::-moz-range-thumb, &::-ms-thumb
+    position: relative
+    top: 7px
+    border: 1px solid #000000
+    height: 16px
+    width: 16px
+    border-radius: 3px
+    background: #000000
+    cursor: pointer
+  // track
+  &::-webkit-slider-runnable-track
+    width: 100%
+    height: 2px
+    cursor: pointer
+    background: #cccccc
+  &:focus::-webkit-slider-runnable-track
+    background: #cccccc
+  &::-moz-range-track
+    width: 100%
+    height: 2px
+    cursor: pointer
+    background: #cccccc
+  &::-ms-track
+    width: 100%
+    height: 2px
+    cursor: pointer
+    background: transparent
+    border-color: transparent
+    color: transparent
+  &::-ms-fill-lower
+    background: #cccccc
+  &:focus::-ms-fill-lower
+    background: #cccccc
+  &::-ms-fill-upper
+    background: #cccccc
+  &:focus::-ms-fill-upper
+    background: #cccccc
+
+#drops-container
+  position: absolute
+  top: 0
+  left: 20%
+  bottom: 0
+  right: 0
+  max-width: 60%
+  z-index: 999
+  pointer-events: none
+
+  .drop
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    width: 40px
+    height: 40px
+    &.drop--1
+      background: url('../images/images/raindrop_1.png')
+      background-repeat: no-repeat
+    &.drop--2
+      background: url('../images/images/raindrop_2.png')
+      background-repeat: no-repeat
+    &.drop--3
+      background: url('../images/images/raindrop_3.png')
+      background-repeat: no-repeat
+    &.drop--4
+      background: url('../images/images/raindrop_4.png')
+      background-repeat: no-repeat
+
+
+
+
+// .range-container
+//   display: flex
+//   height: 180px
+//   margin-right: 40px
+//   position: relative
+
+  // .range-container__range-values
+  //   position: relative
+  //   width: 50px
+  //   .range-values__value
+  //     position: absolute
+  //     right: 0
+  //     &.range-values__value--low
+  //       bottom: 0
+  //     &.range-values__value--current
+  //       top: 45%
+  //     &.range-values__value--high
+  //       top: 0
