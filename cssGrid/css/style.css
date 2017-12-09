@@ -1,0 +1,349 @@
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url("../font/Raleway-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Raleway-Regular.woff") format("woff"), url("../font/Raleway-Regular.ttf") format("truetype"), url("../font/Raleway-Regular.svg#Raleway-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Raleway-Regular', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+}
+
+.main-header {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.main-header:before {
+  content: '';
+  position: absolute;
+  opacity: 0.8;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #293a43;
+}
+
+.main-header .header-content {
+  z-index: 1;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.main-header .header-content h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.main-header .header-content .button {
+  padding: 10px 60px;
+  font-size: 20px;
+  text-transform: none;
+}
+
+.portfolio-section {
+  padding: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.protfolio-item {
+  min-height: 32vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  align-content: center;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  transition: color .3s ease;
+  cursor: pointer;
+}
+
+.protfolio-item:hover {
+  color: #f0650d;
+}
+
+.protfolio-item:hover:before {
+  opacity: .8;
+}
+
+.protfolio-item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #293a43;
+  opacity: 0.65;
+  transition: opacity .3s ease;
+}
+
+.protfolio-item > * {
+  z-index: 1;
+}
+
+.protfolio-item:nth-child(1) {
+  grid-column: 1 / 3;
+}
+
+.protfolio-item:nth-child(5) {
+  grid-column: 2 / 4;
+}
+
+.protfolio-item:nth-child(6) {
+  grid-column: 4;
+  grid-row: 2 / 4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.landing-section {
+  padding: 80px 0;
+}
+
+.landing-section h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #293a43;
+  line-height: 1.2;
+}
+
+.section-ready {
+  background-color: #ededed;
+}
+
+.section-ready .container {
+  grid-template-columns: 1fr 1fr;
+}
+
+.section-ready .ready-left {
+  border-right: 1px solid #dadada;
+  font-size: 18px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-right: 60px;
+  line-height: 1.75;
+}
+
+.section-ready .ready-left h2 {
+  margin-top: 0;
+}
+
+.section-ready .ready-right {
+  padding-left: 40px;
+}
+
+.form-section {
+  display: block;
+  padding: 30px 0;
+  background-color: #293a43;
+}
+
+.form-section input {
+  background-color: #354a56;
+  width: 100%;
+}
+
+.form-section form {
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.form-section .button {
+  font-size: 17px;
+  font-weight: 700;
+  padding: 14.5px;
+  width: 100%;
+}
+
+.blog-home {
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.blog-home .buttoncase {
+  grid-column: 2 / 4;
+}
+
+.blog-home .buttoncase .button {
+  width: 100%;
+}
+
+.blog-home .blog-item {
+  background-color: #f7f7f7;
+  text-decoration: none;
+  color: #333;
+  grid-template-rows: 1fr 1fr;
+  transition: background-color .25s ease;
+  overflow: hidden;
+}
+
+.blog-home .blog-item:hover .blog-item-content {
+  background-color: #ededed;
+}
+
+.blog-home .blog-item:hover h4 {
+  color: #293a43;
+}
+
+.blog-home .blog-item:hover .blog-item-img {
+  transform: scale(1.05) translateY(-6.5px);
+}
+
+.blog-home .blog-item:nth-child(3) {
+  grid-column: 3 / 5;
+}
+
+.blog-home .blog-item:nth-child(4) {
+  grid-column: 1 / 3;
+}
+
+.blog-home .blog-item .blog-item-img {
+  min-height: 270px;
+  background-size: cover;
+  background-position: center;
+  transition: transform .25s ease;
+}
+
+.blog-home .blog-item .blog-item-content {
+  padding: 25px;
+  text-align: center;
+  align-content: center;
+  transition: background-color .25s ease;
+}
+
+.blog-home .blog-item .blog-item-content h4 {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.3;
+  margin: 0;
+  transition: color .25s ease;
+}
+
+.blog-home .blog-item .blog-item-content p {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.main-footer {
+  padding: 30px 0;
+  background-color: #1a242a;
+  text-align: center;
+  color: #4e5355;
+  font-size: 30px;
+}
+
+.main-footer .footer-logo {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  border: none;
+  padding: 15px 20px;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  outline: none;
+  transition: background-color, .25s ease;
+}
+
+input:focus, textarea:focus {
+  background-color: #ededed;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #507182;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  background-color: #f0650d;
+  padding: 15px 45px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .1s ease;
+  cursor: pointer;
+}
+
+.button::after {
+  transition: background-color .2s ease;
+  position: absolute;
+  content: '';
+  height: 4px;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  opacity: .18;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  left: 0;
+}
+
+.button:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #f37423;
+}
+
+.button:hover::after {
+  opacity: .22;
+}
+
+.button:active {
+  background-color: #d85b0c;
+}
+
+.button:active::after {
+  opacity: .32;
+}
+
+.button.button-gray {
+  background-color: #4b5a65;
+}
+
+.button.button-gray::after {
+  background-color: #2a3339;
+}
+
+.button.button-gray:hover {
+  background-color: #566774;
+}

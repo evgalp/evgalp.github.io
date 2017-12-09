@@ -1,0 +1,127 @@
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .main-header {
+    line-height: 1.3;
+  }
+  .main-header .header-content {
+    padding: 40px 20px;
+  }
+  .main-header .header-content h1 {
+    font-size: 50px;
+  }
+  .button {
+    font-size: 18px !important;
+  }
+  .buttoncase {
+    grid-column: 2 / 4 !important;
+  }
+  .portfolio-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .protfolio-item:nth-child(4) {
+    grid-column: 2 / 4;
+  }
+  .protfolio-item:nth-child(5) {
+    grid-column: 1 / 3;
+    grid-row: initial;
+  }
+  .protfolio-item:nth-child(6) {
+    grid-column: initial;
+    grid-row: initial;
+  }
+  .blog-home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .blog-home .blog-item {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  .blog-home .buttoncase {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .main-header .header-content {
+    padding: 40px 20px;
+  }
+  .main-header .header-content h1 {
+    font-size: 50px;
+  }
+  .landing-section {
+    padding: 30px 0;
+  }
+  .landing-section h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .section-ready .container {
+    grid-template-columns: 2fr;
+  }
+  .section-ready .container > div {
+    padding: 0 8%;
+  }
+  .section-ready .container .ready-left {
+    border: 0;
+  }
+  .form-section form {
+    grid-template-columns: 1fr;
+  }
+  .blog-home {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-home .blog-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .header-buttons .button {
+    margin-bottom: 20px;
+  }
+  .portfolio-section {
+    grid-template-columns: 1fr;
+  }
+  .protfolio-item {
+    min-height: 50vh;
+  }
+  .protfolio-item:nth-child(1) {
+    grid-column: initial;
+  }
+  .protfolio-item:nth-child(2) {
+    grid-column: initial;
+  }
+  .protfolio-item:nth-child(3) {
+    grid-column: initial;
+  }
+  .protfolio-item:nth-child(4) {
+    grid-column: initial;
+  }
+  .protfolio-item:nth-child(5) {
+    grid-column: initial;
+  }
+  .protfolio-item:nth-child(6) {
+    grid-column: initial;
+  }
+  .buttoncase {
+    grid-column: 1 / 2;
+  }
+}
+
+/* Custom, iPhone Retina */
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
