@@ -1,0 +1,307 @@
+// style.css
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Regular.ttf") format("ttf");
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  img{
+    max-width: 100%;
+  }
+  ul{
+    padding: 0;
+  }
+}
+
+
+.header{
+  position: absolute;
+  background-color: rgba(0,0,0,0.3);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .menu{
+    width: 80%;
+  }
+  .menu__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+  }
+  .menu__item{
+    padding: 20px 0;
+    margin: 0 10px;
+  }
+  .menu__link{
+    padding: 20px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .2s ease;
+    color: #ececec;
+    opacity: .7;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+.section{
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 20px;
+  &.section--full-height{
+    min-height: 100vh;
+  }
+  &.section--parallax{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  &.section--painted{
+    background-color: #f8f8f8;
+  }
+}
+
+.section-content {
+  padding: 0 20px;
+  color: #333;
+  &__heading {
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 45px;
+  }
+  &__paragraph {
+    line-height: 1.4;
+  }
+}
+
+.columns-1{
+  .columns-1__child{
+    width: 100%;
+    text-align: justify;
+  }
+}
+
+.columns-2{
+  .columns-2__child{
+    width: 50%;
+    text-align: justify;
+    &--vertical-middle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.section-home{
+  background-image: url("../img/home-dawn.jpg");
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .main-title{
+    margin-top: 35vh;
+    &__title{
+      font-size: 50px;
+      color: #fff;
+      margin: 0;
+    }
+    &__separator{
+      height: 2px;
+      background-color: #fff;
+      display: block;
+      width: 150px;
+      margin: 20px 0;
+    }
+    &__tagline{
+      color: #fff;
+    }
+  }
+  .call-to-scroll{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 35px;
+    transition: .2s ease;
+    text-decoration: none;
+    &:hover{
+      cursor: pointer;
+      opacity: .7;
+    }
+  }
+}
+
+.section-two{
+  background-image: url("../img/active-activity-adventure.jpg");
+}
+
+.section-gallery{
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: -4px;
+    .gallery__image{
+      margin: 0;
+      padding: 0;
+      width: 33.33%;
+      max-height: 350px;
+      margin-top: -4px;
+      overflow: hidden;
+      position: relative;
+      img{
+        max-width: 100%;
+        overflow: hidden;
+        transition: .5s ease;
+        transform: scale(1.05);
+        &:hover{
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.gallery-lightbox{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  &__image{
+    margin: 50px;
+    img{
+      max-height: 80vh;
+    }
+
+  }
+  &__message{
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
+.features-title{
+  font-size: 45px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+}
+
+.banner-features{
+  .features{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    .feature{
+      background: #f8f8f8;
+      color: #333;
+      border: 1px solid #333;
+      margin: 10px 5px;
+      padding: 10px 20px;
+      max-width: 450px;
+      .feature__image{
+        font-size: 100px;
+        text-align: center;
+      }
+      .feature__title{
+        font-size: 25px;
+        text-align: center;
+      }
+      .feature__desription{
+        padding: 0;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+
+.section.section-contacts{
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/active-activity-adventure.jpg");
+  background-size: cover;
+  .contacts-form{
+    width: 40%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    .section-content__heading{
+      margin: 30px 0;
+    }
+  }
+  .input-group{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    .input-group-addon{
+      width: 20%;
+      &--start{
+        margin-top: 5px;
+        align-self: flex-start;
+
+      }
+    }
+    .form-control{
+      flex-grow: 1;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 0 10px;
+    }
+    textarea.form-control{
+      min-height: 150px;
+      line-height: 25px;
+      padding-top: 5px;
+    }
+    &--end{
+      text-align: right;
+    }
+  }
+  .send-button{
+    align-self: flex-end;
+    width: 30%;
+    height: 50px;
+    background-color: #1C9963;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 25px;
+    transition: all .3s ease;
+    &:hover{
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+}

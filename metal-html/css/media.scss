@@ -1,0 +1,102 @@
+// media.css
+
+@media(max-width: 1200px){
+  .banner-features{
+    .features{
+      justify-content: space-between;
+      .feature{
+        width: 33%;
+      }
+    }
+  }
+
+  .section-gallery{
+    .gallery{
+      .gallery__image{
+        max-height: 240px;
+      }
+    }
+  }
+}
+
+@media(max-width: 1024px){
+
+}
+
+@media(max-width: 800px){
+  .header{
+    .menu{
+      width: 100%;
+    }
+  }
+  .columns-2{
+    display: flex;
+    flex-direction: column;
+    .columns-2__child{
+      width: 100%;
+    }
+  }
+
+  .banner-features{
+    .features{
+      flex-direction: column;
+      align-items: center;
+      .feature{
+        margin: 10px 0;
+        width: 80%;
+      }
+    }
+  }
+
+  .section-gallery{
+    .gallery{
+      .gallery__image{
+        width: 50%;
+        max-height: 240px;
+      }
+    }
+  }
+}
+
+@media(max-width: 600px){
+  .header{
+    .menu__item{
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+  .section-gallery{
+    .gallery{
+      .gallery__image{
+        width: 100%;
+        max-height: 350px;
+      }
+    }
+  }
+  .section-content{
+    &__heading{
+      font-size: 35px;
+    }
+  }
+  .features-title{
+    font-size: 35px;
+  }
+  .contacts-form{
+    width: 95%;
+    .input-group{
+      flex-direction: column;
+      .input-group-addon{
+        width: 100% !important;
+        margin-bottom: 10px;
+      }
+      .form-control{
+        width: 100%;
+      }
+
+    }
+    .send-button{
+      width: 100% !important;
+    }
+  }
+}
